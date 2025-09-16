@@ -49,7 +49,10 @@ Use the following [Nacos deployment guide](https://cn.aliyun.com/product/aliware
 #### Step 1: Download the binary package 
 
 You can download the package from the [latest stable release](https://github.com/alibaba/nacos/releases).  
-
+编译并打包
+```sh
+mvn -Prelase-nacos clean install -U -Dmaven.test.skip=true
+```
 Take release `nacos-server-1.0.0.zip` for example:
 ```sh
 unzip nacos-server-1.0.0.zip

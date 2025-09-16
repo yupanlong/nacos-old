@@ -54,11 +54,11 @@ public class MapperManagerTest {
             
             @Override
             public String getDataSource() {
-                return DataSourceConstant.MYSQL;
+                return DataSourceConstant.MSSQL;
             }
         });
         MapperManager instance = MapperManager.instance(false);
-        Mapper mapper = instance.findMapper(DataSourceConstant.MYSQL, "test");
+        Mapper mapper = instance.findMapper(DataSourceConstant.MSSQL, "test");
         Assert.assertNotNull(mapper);
     }
     
@@ -66,7 +66,7 @@ public class MapperManagerTest {
     public void testFindMapper() {
         testJoin();
         MapperManager instance = MapperManager.instance(false);
-        Mapper mapper = instance.findMapper(DataSourceConstant.MYSQL, "test");
+        Mapper mapper = instance.findMapper(DataSourceConstant.MSSQL, "test");
         Assert.assertNotNull(mapper);
     }
 }
